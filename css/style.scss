@@ -1,0 +1,1034 @@
+$default-margin: 0 100px;
+$inside-padding: 90px 90px;
+$default-border-radius: 25px;
+$smaller-border-radius: 12px;
+$default-box-shadow: 0 4px 50px -20px #0a0a0a;
+$font-size-h2: 1.5em;
+$font-weight-h2: 900;
+$light-black: #050505;
+$dark-white: #f0f0f0;
+
+$default-responsive-width: 90%;
+$default-responsive-margin: 40% auto;
+$default-responsive-padding: 0;
+
+html,
+body {
+  background-color: $dark-white;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel-grid {
+  display: none !important;
+}
+
+.carousel-active {
+  display: grid !important;
+}
+
+.projects-img {
+  display: none !important;
+}
+
+.projects-img-active {
+  display: inline-block !important;
+}
+
+#course-text-first,
+#course-text-second,
+#course-text-third {
+  display: none;
+}
+
+.course-active {
+  background-color: $light-black;
+  color: white;
+}
+
+.title {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-h2;
+}
+
+.fa-check-circle {
+  color: green;
+}
+
+.register {
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  border-radius: 8px;
+}
+
+.header {
+  .logo {
+    color: white !important;
+  }
+  .desktop {
+    background-color: $light-black;
+    color: white;
+    height: 450px;
+    padding: $default-margin;
+    .nav-item {
+      font-weight: 100;
+      display: inline-block;
+      padding-top: 30px;
+      margin-left: 50px;
+      vertical-align: middle;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    #desktop-logo {
+      margin-left: 0;
+      font-size: 3em;
+    }
+
+    .register-nav {
+      padding: 0.5em 1em;
+      color: white;
+      text-decoration: none;
+      background: #363636;
+      border-radius: $default-border-radius;
+    }
+  }
+  .mobile {
+    display: none;
+    .navbar-mobile {
+      .nav-item-mobile {
+        color: white;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.carousel {
+  margin: $default-margin;
+  color: black;
+  background-color: white;
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
+  position: absolute;
+  top: 100px;
+  width: 80%;
+  height: 450px;
+  .carousel-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: $inside-padding;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    .carousel-information {
+      text-align: left;
+      h1 {
+        font-size: 2em;
+        font-weight: 900;
+      }
+      h2 {
+        font-size: 1.5em;
+        color: grey;
+        margin: 10px 0 50px;
+      }
+      p {
+        text-align: justify;
+        line-height: 2em;
+        margin-bottom: 50px;
+        height: 100px;
+      }
+      .carousel-register {
+        padding: 1em 5em;
+      }
+    }
+    .carousel-img {
+      height: 130%;
+      margin: 0 auto;
+    }
+  }
+  #button-prev,
+  #button-next {
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 3em;
+    top: 40%;
+    margin: 0 10px;
+    position: absolute;
+  }
+  #button-prev {
+    left: 0;
+  }
+  #button-next {
+    right: 0;
+  }
+}
+
+.about-us {
+  color: black;
+  margin: $default-margin;
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
+  background-color: white;
+  margin-top: 19%;
+  height: auto;
+  .about-us-logo-responsive {
+    display: none;
+  }
+  .about-us-logo {
+    top: 100%;
+    left: 23%;
+    background-color: $light-black;
+    width: 200px;
+    font-size: 2em;
+    border-radius: $default-border-radius;
+    padding: $inside-padding;
+    position: absolute;
+    color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+  .about-us-div {
+    padding: $inside-padding;
+    .about-us-header {
+      text-align: right;
+      height: 120px;
+      .about-us-title {
+        display: inline-block;
+        padding-right: 150px;
+        vertical-align: top;
+      }
+      ul {
+        display: inline-block;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    p {
+      line-height: 2em;
+      text-align: justify;
+      height: auto;
+    }
+  }
+}
+
+.course-experience {
+  color: black;
+  margin: $default-margin;
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
+  background-color: white;
+  margin-top: 19%;
+  height: auto;
+  padding: $inside-padding;
+  .course-experience-title {
+    text-align: center;
+  }
+  ul {
+    text-align: center;
+    margin: 5% auto;
+    li {
+      border: 1px solid black;
+      padding: 1em 5em;
+      display: inline-block;
+      margin: 0 -3px;
+      transition: 0.5s all;
+      cursor: pointer;
+      &:first-child {
+        border-top-left-radius: $smaller-border-radius;
+        border-bottom-left-radius: $smaller-border-radius;
+      }
+      &:last-child {
+        border-top-right-radius: $smaller-border-radius;
+        border-bottom-right-radius: $smaller-border-radius;
+      }
+      &:hover {
+        background-color: $light-black;
+        color: white;
+      }
+    }
+  }
+  .course-experience-p {
+    width: 60%;
+    margin-top: 2%;
+    float: right;
+    line-height: 2em;
+    text-align: justify;
+  }
+  .course-experience-box {
+    display: inline-block;
+    padding: 0.9em;
+    margin: 10% 0 0 8%;
+    width: 15%;
+    border: 1px solid black;
+    border-radius: $smaller-border-radius;
+    .course-experience-logo {
+      border-radius: $smaller-border-radius;
+      padding: 0.9em;
+      border: 1px solid black;
+      font-size: 1em;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      align-items: center;
+    }
+  }
+}
+
+.sessions {
+  background-color: white;
+  margin: 5% 0;
+  .sessions-header {
+    .sessions-title {
+      padding-top: 5%;
+      text-align: center;
+      margin-bottom: 10%;
+    }
+  }
+  .sessions-sessions {
+    margin: $default-margin;
+    border-left: 2px solid $dark-white;
+    padding-bottom: 5%;
+    .sessions-information {
+      margin: 0 10px 40px 10px;
+      background-color: $dark-white;
+      border-radius: 8px;
+      padding: 0.5em;
+      ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        .sessions-number {
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+      }
+    }
+    .sessions-container {
+      margin: 0 10px;
+      display: grid;
+      grid-template-columns: 25% 75%;
+      img {
+        border-radius: 8px;
+        padding-left: 10px;
+        height: 5em;
+      }
+      .sessions-p {
+        line-height: 2em;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.masters {
+  background-color: white;
+  margin: $default-margin;
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
+  padding: $inside-padding;
+  .masters-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .masters-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto;
+    .master {
+      text-align: center;
+      .img-overlay {
+        .overlay {
+          cursor: pointer;
+          position: absolute;
+          transition: 0.8s ease;
+          opacity: 0;
+          transform: translate(42%, -150%);
+          text-align: center;
+          ul {
+            width: 7em;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            li {
+              margin-right: 0.1em;
+              margin-bottom: 0.5em;
+            }
+          }
+          .about-master {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 0.8em;
+            padding: 0.4em;
+            border-radius: 5px;
+          }
+        }
+        img {
+          width: 7em;
+          opacity: 1;
+          transition: 0.8s ease;
+          backface-visibility: hidden;
+        }
+
+        &:hover {
+          img {
+            opacity: 0.3;
+          }
+          .overlay {
+            opacity: 1;
+          }
+        }
+      }
+      .master-name {
+        font-weight: bold;
+        margin: 1em 0;
+      }
+      .master-status {
+        font-size: 0.8em;
+        margin-bottom: 4em;
+      }
+    }
+  }
+}
+
+.faq {
+  margin-top: 10%;
+  .faq-title {
+    text-align: center;
+    margin-bottom: 4%;
+  }
+  ul {
+    margin: $default-margin;
+    li {
+      cursor: pointer;
+      padding: 1em 2em;
+      margin-bottom: 2em;
+      background-color: white;
+      border-radius: $smaller-border-radius;
+      display: grid;
+      grid-template-columns: 95% 5%;
+      .faq-hide {
+        display: none;
+        margin-top: 2em;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.course-fee {
+  background-color: white;
+  box-shadow: $default-box-shadow;
+  margin: $default-margin;
+  border-radius: $default-border-radius;
+  padding: 3em 4em;
+  .course-fee-title {
+    text-align: center;
+    margin-bottom: 90px;
+  }
+  .course-fee-grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    .course-achievements {
+      h3 {
+        font-weight: bold;
+      }
+      ul {
+        li {
+          font-size: 0.8em;
+          margin-top: 3em;
+        }
+      }
+    }
+    .course-fee-box {
+      text-align: center;
+      padding: 3em 5em;
+      display: inline-block;
+      background-color: #0a0700;
+      color: white;
+      border-radius: 15px;
+      .course-fee-line {
+        text-decoration: line-through;
+        margin-bottom: 1.5em;
+      }
+      .course-fee-real-price {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 1.7em;
+      }
+      .course-fee-description {
+        font-size: 0.8em;
+        margin-bottom: 3em;
+      }
+      .course-fee-register {
+        padding: 0.6em 3em;
+      }
+    }
+  }
+  hr {
+    height: 0;
+    border: 0.1em solid $dark-white;
+  }
+  .course-fee-refound {
+    color: lightgrey;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-top: 3em;
+    text-align: center;
+  }
+}
+
+.list-heading {
+  margin-top: 10%;
+  background-color: black;
+  color: white;
+  padding: 5em 7em;
+  .list-heading-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    .list-heading-form {
+      .list-heading-title {
+        margin-bottom: 1em;
+      }
+      .list-heading-description {
+        color: $dark-white;
+        font-size: 0.9em;
+      }
+      input {
+        margin: 2em 0;
+        text-decoration: none;
+        outline: none;
+        background-color: #383838;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        width: 100%;
+        font-size: 1.1em;
+        padding: 0.5em;
+      }
+      .list-heading-sent {
+        font-size: 0.8em;
+        color: darkgrey;
+      }
+    }
+    div {
+      margin: auto 0;
+      text-align: center;
+    }
+  }
+}
+
+.projects {
+  background-color: white;
+  padding: $inside-padding;
+  .projects-title {
+    text-align: center;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    position: relative;
+    .projects-project {
+      h3 {
+        font-size: 2.01em;
+        font-weight: bold;
+      }
+      p {
+        margin: 1.2em 0;
+        text-align: justify;
+        line-height: 2em;
+      }
+      li {
+        margin-top: 2.2em;
+      }
+      .projects-counter {
+        background-color: $dark-white;
+        display: inline-block;
+        padding: 1em 4em;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .projects-photo {
+      text-align: center;
+      font-size: 4em;
+      img {
+        width: 55%;
+      }
+      .projects-counter-responsive {
+        display: none;
+      }
+      #projects-next,
+      #projects-prev {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.schedule {
+  .schedule-title {
+    text-align: center;
+  }
+  .schedule-interval {
+    text-align: center;
+    margin: 3em 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    .schedule-duration {
+      display: inline-block;
+      margin: 0 1em;
+    }
+    .schedule-hr {
+      display: inline-block;
+      color: lightgrey;
+      hr {
+        display: inline-block;
+        width: 15em;
+        height: 0;
+        vertical-align: middle;
+        border: 2px dashed lightgrey;
+      }
+    }
+  }
+  ul {
+    text-align: center;
+    .schedule-responsive {
+      display: none;
+    }
+    li {
+      font-weight: bold;
+      background-color: white;
+      padding: 0.5em 0.6em;
+      border-radius: 15px;
+      margin: 0 1em;
+      font-size: 2em;
+      display: inline-block;
+      width: 20%;
+    }
+  }
+  .schedule-days-left {
+    text-align: center;
+    vertical-align: middle;
+    margin: 4em 0;
+    strong {
+      background-color: black;
+      padding: 0.3em 0.4em;
+      color: white;
+      border-radius: 8px;
+      font-size: 1.3em;
+    }
+    p {
+      font-weight: bold;
+      font-size: 1.2em;
+      display: inline-block;
+      margin: 0 2em;
+    }
+    .schedule-register {
+      padding: 0.6em 3em;
+    }
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  height: 10%;
+  padding: 5% 4%;
+  background-color: white;
+  align-items: center;
+  li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .footer-logo {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 15%;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .footer-contact {
+    font-size: 0.8em;
+    br {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  // 820 à 1150
+  .about-us {
+    .about-us-logo {
+      top: 40vh;
+      left: 13%;
+    }
+  }
+  .course-experience {
+    text-align: center;
+    .course-experience-box {
+      display: none;
+    }
+    .course-experience-p {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+  .projects {
+    margin: $default-responsive-margin;
+    padding: $default-responsive-padding;
+    width: $default-responsive-width;
+    .projects-grid {
+      padding: 2em 3em;
+      grid-template-rows: auto auto;
+      grid-template-columns: auto;
+      .projects-project {
+        .projects-counter {
+          display: none;
+        }
+      }
+      .projects-photo {
+        font-size: 2.5em;
+        .projects-counter-responsive {
+          display: inline;
+          border-radius: 12px;
+          font-size: 0.5em;
+          text-align: center;
+          background-color: $dark-white;
+          padding: 0.7em 1.2em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  // 0 à 820
+  $default-margin: 0 1em;
+  $inside-padding: 2em;
+  $default-border-radius: 25px;
+  $smaller-border-radius: 12px;
+
+  .header {
+    width: 83%;
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      top: 0;
+      z-index: 1;
+      display: inline-block;
+      width: $default-responsive-width;
+      padding: 2em;
+      margin-bottom: 3em;
+      background-color: black;
+      color: white;
+      position: absolute;
+      .responsive {
+        padding: 0 10%;
+        font-size: 1.5em;
+        #hamburguer {
+          float: right;
+        }
+        .logo{
+          color: white;
+        }
+      }
+      ul {
+        display: none;
+        text-align: center;
+        .nav-item-mobile {
+          margin: 1.2em 0;
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .carousel {
+    line-height: normal;
+    position: static;
+    width: $default-responsive-width;
+    display: block;
+    height: 520px;
+    margin: $default-responsive-margin;
+    margin-top: 40%;
+    .carousel-div {
+      .carousel-grid {
+        display: block;
+        padding: 2em;
+        div {
+          padding: 0.3em 2em;
+          display: grid;
+          grid-template-rows: auto auto auto;
+          height: auto;
+          h1 {
+            height: auto;
+          }
+          h2 {
+            height: auto;
+            margin-bottom: 1em;
+          }
+          p {
+            height: auto;
+            margin-bottom: 2em;
+          }
+        }
+      }
+    }
+    #button-prev,
+    #button-next {
+      top: 8em;
+    }
+    #button-prev {
+      left: 0.3em;
+    }
+    #button-next {
+      right: 0.3em;
+    }
+    .carousel-img {
+      display: none;
+    }
+  }
+
+  .about-us {
+    width: $default-responsive-width;
+    margin: $default-responsive-margin;
+    height: auto;
+    .about-us-logo {
+      display: none;
+    }
+    .about-us-div {
+      padding: 1em 2em;
+      .about-us-header {
+        display: grid;
+        grid-template-columns: auto auto;
+        .about-us-logo-responsive {
+          position: absolute;
+          width: 50%;
+          height: 15%;
+          top: 92vh;
+          border-radius: $default-border-radius;
+          background-color: black;
+          color: white;
+          display: grid;
+          grid-template-columns: 50% 50%;
+          align-items: center;
+          padding: 0.5em;
+          p {
+            text-align: right;
+            margin-right: 0.5em;
+          }
+        }
+        .about-us-title {
+          text-align: center;
+          margin: 50% auto 0 auto;
+          padding: 0;
+        }
+        ul {
+          vertical-align: middle;
+          li {
+            text-align: right;
+            margin: 33% auto;
+          }
+        }
+      }
+      p {
+        height: auto;
+        padding: 2em 0;
+      }
+    }
+  }
+
+  .course-experience {
+    width: $default-responsive-width;
+    margin: $default-responsive-margin;
+    height: auto;
+    padding: $default-responsive-padding;
+    .course-experience-title {
+      padding: 2em 2em 1em 2em;
+    }
+    .course-experience-box {
+      display: none;
+    }
+    ul {
+      li {
+        display: block;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 0.8em 1em;
+        margin: 1em;
+        border-radius: $smaller-border-radius;
+      }
+    }
+    .course-experience-p {
+      float: none;
+      margin: 0 auto;
+      font-size: 1em;
+      height: auto;
+      align-items: center;
+      padding-bottom: 2em;
+      p {
+        margin: 0 auto;
+        text-align: left;
+        height: auto;
+      }
+    }
+  }
+
+  .sessions {
+    margin: $default-responsive-margin;
+    width: $default-responsive-width;
+    border-radius: $default-border-radius;
+    .sessions-sessions {
+      border: none;
+      width: 100%;
+      margin: 0 auto;
+      .sessions-information {
+        margin: 2em auto 1em auto;
+        width: 90%;
+        font-size: 1.1em;
+        .sessions-number {
+          margin-top: 0.5em;
+        }
+        ul {
+          display: block;
+          text-align: center;
+          li {
+            margin-bottom: 1.5em;
+          }
+        }
+      }
+      .sessions-container {
+        display: inline-block;
+        .img {
+          display: block;
+          margin: 1em auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .masters {
+    margin: $default-responsive-margin;
+    width: $default-responsive-width;
+    padding: $default-responsive-padding;
+    .masters-title {
+      padding: 2em 2em 1em 2em;
+    }
+    .masters-grid {
+      width: auto;
+      grid-template-columns: auto auto;
+      .master {
+        .img-overlay {
+          .overlay {
+            transform: translate(26%, -175%);
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    width: $default-responsive-width;
+    margin: $default-responsive-margin;
+    ul {
+      margin: auto;
+      li {
+        width: 80%;
+      }
+    }
+    i,
+    svg {
+      align-self: end !important;
+    }
+  }
+
+  .course-fee {
+    margin: $default-responsive-margin;
+    width: $default-responsive-width;
+    padding: $default-responsive-padding;
+    .course-fee-title {
+      padding: 1em 2em 2em 2em;
+      margin-bottom: 0;
+    }
+    .course-fee-grid {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      padding: 1em 2em;
+      .course-fee-box {
+        margin-top: 2em;
+        padding: 1em 2em;
+      }
+    }
+    .course-fee-refound {
+      margin: 0;
+      padding: 1em;
+    }
+  }
+
+  .list-heading {
+    padding: 1em 2em;
+    .list-heading-grid {
+      display: block;
+      .list-heading-form {
+        .list-heading-sent {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+
+  .schedule {
+    padding: $default-responsive-padding;
+    margin: $default-responsive-margin;
+    width: $default-responsive-width;
+    .schedule-interval {
+      display: none;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      .schedule-responsive {
+        display: block;
+        font-size: 1.1em;
+        background-color: $dark-white;
+      }
+      li {
+        font-size: 1em;
+        width: 80%;
+      }
+    }
+    .schedule-days-left {
+      margin-top: 2em;
+      p {
+        margin-left: 0.5em;
+        margin-bottom: 2em;
+      }
+    }
+  }
+  footer {
+    .footer-logo {
+      margin-left: 1em;
+    }
+    .footer-contact {
+      br {
+        display: block;
+      }
+    }
+  }
+}

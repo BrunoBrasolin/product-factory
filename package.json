@@ -1,0 +1,13 @@
+{
+    "nome": "product-factory",
+    "version": "1.0.0",
+    "description": "Um projeto para a vaga de Front-end na Otimaideia",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BrunoBrasolin/product-factory"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "sass": "^1.26.3"
+    }
+}

@@ -1,0 +1,976 @@
+html,
+body {
+  background-color: #f0f0f0;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.carousel-grid {
+  display: none !important;
+}
+
+.carousel-active {
+  display: grid !important;
+}
+
+.projects-img {
+  display: none !important;
+}
+
+.projects-img-active {
+  display: inline-block !important;
+}
+
+#course-text-first,
+#course-text-second,
+#course-text-third {
+  display: none;
+}
+
+.course-active {
+  background-color: #050505;
+  color: white;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.fa-check-circle {
+  color: green;
+}
+
+.register {
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  border-radius: 8px;
+}
+
+.header .logo {
+  color: white !important;
+}
+.header .desktop {
+  background-color: #050505;
+  color: white;
+  height: 450px;
+  padding: 0 100px;
+}
+.header .desktop .nav-item {
+  font-weight: 100;
+  display: inline-block;
+  padding-top: 30px;
+  margin-left: 50px;
+  vertical-align: middle;
+}
+.header .desktop .nav-item a {
+  text-decoration: none;
+  color: white;
+}
+.header .desktop #desktop-logo {
+  margin-left: 0;
+  font-size: 3em;
+}
+.header .desktop .register-nav {
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  background: #363636;
+  border-radius: 25px;
+}
+.header .mobile {
+  display: none;
+}
+.header .mobile .navbar-mobile .nav-item-mobile {
+  color: white;
+}
+.header .mobile .navbar-mobile .nav-item-mobile a {
+  text-decoration: none;
+}
+
+.carousel {
+  margin: 0 100px;
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 4px 50px -20px #0a0a0a;
+  position: absolute;
+  top: 100px;
+  width: 80%;
+  height: 450px;
+}
+.carousel .carousel-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 90px 90px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+.carousel .carousel-grid .carousel-information {
+  text-align: left;
+}
+.carousel .carousel-grid .carousel-information h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+.carousel .carousel-grid .carousel-information h2 {
+  font-size: 1.5em;
+  color: grey;
+  margin: 10px 0 50px;
+}
+.carousel .carousel-grid .carousel-information p {
+  text-align: justify;
+  line-height: 2em;
+  margin-bottom: 50px;
+  height: 100px;
+}
+.carousel .carousel-grid .carousel-information .carousel-register {
+  padding: 1em 5em;
+}
+.carousel .carousel-grid .carousel-img {
+  height: 130%;
+  margin: 0 auto;
+}
+.carousel #button-prev,
+.carousel #button-next {
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 3em;
+  top: 40%;
+  margin: 0 10px;
+  position: absolute;
+}
+.carousel #button-prev {
+  left: 0;
+}
+.carousel #button-next {
+  right: 0;
+}
+
+.about-us {
+  color: black;
+  margin: 0 100px;
+  border-radius: 25px;
+  box-shadow: 0 4px 50px -20px #0a0a0a;
+  background-color: white;
+  margin-top: 19%;
+  height: auto;
+}
+.about-us .about-us-logo-responsive {
+  display: none;
+}
+.about-us .about-us-logo {
+  top: 100%;
+  left: 23%;
+  background-color: #050505;
+  width: 200px;
+  font-size: 2em;
+  border-radius: 25px;
+  padding: 90px 90px;
+  position: absolute;
+  color: white;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+.about-us .about-us-div {
+  padding: 90px 90px;
+}
+.about-us .about-us-div .about-us-header {
+  text-align: right;
+  height: 120px;
+}
+.about-us .about-us-div .about-us-header .about-us-title {
+  display: inline-block;
+  padding-right: 150px;
+  vertical-align: top;
+}
+.about-us .about-us-div .about-us-header ul {
+  display: inline-block;
+}
+.about-us .about-us-div .about-us-header ul li {
+  margin-bottom: 10px;
+}
+.about-us .about-us-div p {
+  line-height: 2em;
+  text-align: justify;
+  height: auto;
+}
+
+.course-experience {
+  color: black;
+  margin: 0 100px;
+  border-radius: 25px;
+  box-shadow: 0 4px 50px -20px #0a0a0a;
+  background-color: white;
+  margin-top: 19%;
+  height: auto;
+  padding: 90px 90px;
+}
+.course-experience .course-experience-title {
+  text-align: center;
+}
+.course-experience ul {
+  text-align: center;
+  margin: 5% auto;
+}
+.course-experience ul li {
+  border: 1px solid black;
+  padding: 1em 5em;
+  display: inline-block;
+  margin: 0 -3px;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.course-experience ul li:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.course-experience ul li:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.course-experience ul li:hover {
+  background-color: #050505;
+  color: white;
+}
+.course-experience .course-experience-p {
+  width: 60%;
+  margin-top: 2%;
+  float: right;
+  line-height: 2em;
+  text-align: justify;
+}
+.course-experience .course-experience-box {
+  display: inline-block;
+  padding: 0.9em;
+  margin: 10% 0 0 8%;
+  width: 15%;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+.course-experience .course-experience-box .course-experience-logo {
+  border-radius: 12px;
+  padding: 0.9em;
+  border: 1px solid black;
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.sessions {
+  background-color: white;
+  margin: 5% 0;
+}
+.sessions .sessions-header .sessions-title {
+  padding-top: 5%;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.sessions .sessions-sessions {
+  margin: 0 100px;
+  border-left: 2px solid #f0f0f0;
+  padding-bottom: 5%;
+}
+.sessions .sessions-sessions .sessions-information {
+  margin: 0 10px 40px 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 0.5em;
+}
+.sessions .sessions-sessions .sessions-information ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.sessions .sessions-sessions .sessions-information ul .sessions-number {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.sessions .sessions-sessions .sessions-container {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.sessions .sessions-sessions .sessions-container img {
+  border-radius: 8px;
+  padding-left: 10px;
+  height: 5em;
+}
+.sessions .sessions-sessions .sessions-container .sessions-p {
+  line-height: 2em;
+  text-align: justify;
+}
+
+.masters {
+  background-color: white;
+  margin: 0 100px;
+  border-radius: 25px;
+  box-shadow: 0 4px 50px -20px #0a0a0a;
+  padding: 90px 90px;
+}
+.masters .masters-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.masters .masters-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto;
+}
+.masters .masters-grid .master {
+  text-align: center;
+}
+.masters .masters-grid .master .img-overlay .overlay {
+  cursor: pointer;
+  position: absolute;
+  transition: 0.8s ease;
+  opacity: 0;
+  transform: translate(42%, -150%);
+  text-align: center;
+}
+.masters .masters-grid .master .img-overlay .overlay ul {
+  width: 7em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.masters .masters-grid .master .img-overlay .overlay ul li {
+  margin-right: 0.1em;
+  margin-bottom: 0.5em;
+}
+.masters .masters-grid .master .img-overlay .overlay .about-master {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 0.8em;
+  padding: 0.4em;
+  border-radius: 5px;
+}
+.masters .masters-grid .master .img-overlay img {
+  width: 7em;
+  opacity: 1;
+  transition: 0.8s ease;
+  backface-visibility: hidden;
+}
+.masters .masters-grid .master .img-overlay:hover img {
+  opacity: 0.3;
+}
+.masters .masters-grid .master .img-overlay:hover .overlay {
+  opacity: 1;
+}
+.masters .masters-grid .master .master-name {
+  font-weight: bold;
+  margin: 1em 0;
+}
+.masters .masters-grid .master .master-status {
+  font-size: 0.8em;
+  margin-bottom: 4em;
+}
+
+.faq {
+  margin-top: 10%;
+}
+.faq .faq-title {
+  text-align: center;
+  margin-bottom: 4%;
+}
+.faq ul {
+  margin: 0 100px;
+}
+.faq ul li {
+  cursor: pointer;
+  padding: 1em 2em;
+  margin-bottom: 2em;
+  background-color: white;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+.faq ul li .faq-hide {
+  display: none;
+  margin-top: 2em;
+  font-style: italic;
+}
+
+.course-fee {
+  background-color: white;
+  box-shadow: 0 4px 50px -20px #0a0a0a;
+  margin: 0 100px;
+  border-radius: 25px;
+  padding: 3em 4em;
+}
+.course-fee .course-fee-title {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.course-fee .course-fee-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.course-fee .course-fee-grid .course-achievements h3 {
+  font-weight: bold;
+}
+.course-fee .course-fee-grid .course-achievements ul li {
+  font-size: 0.8em;
+  margin-top: 3em;
+}
+.course-fee .course-fee-grid .course-fee-box {
+  text-align: center;
+  padding: 3em 5em;
+  display: inline-block;
+  background-color: #0a0700;
+  color: white;
+  border-radius: 15px;
+}
+.course-fee .course-fee-grid .course-fee-box .course-fee-line {
+  text-decoration: line-through;
+  margin-bottom: 1.5em;
+}
+.course-fee .course-fee-grid .course-fee-box .course-fee-real-price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1.7em;
+}
+.course-fee .course-fee-grid .course-fee-box .course-fee-description {
+  font-size: 0.8em;
+  margin-bottom: 3em;
+}
+.course-fee .course-fee-grid .course-fee-box .course-fee-register {
+  padding: 0.6em 3em;
+}
+.course-fee hr {
+  height: 0;
+  border: 0.1em solid #f0f0f0;
+}
+.course-fee .course-fee-refound {
+  color: lightgrey;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.list-heading {
+  margin-top: 10%;
+  background-color: black;
+  color: white;
+  padding: 5em 7em;
+}
+.list-heading .list-heading-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.list-heading .list-heading-grid .list-heading-form .list-heading-title {
+  margin-bottom: 1em;
+}
+.list-heading .list-heading-grid .list-heading-form .list-heading-description {
+  color: #f0f0f0;
+  font-size: 0.9em;
+}
+.list-heading .list-heading-grid .list-heading-form input {
+  margin: 2em 0;
+  text-decoration: none;
+  outline: none;
+  background-color: #383838;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  font-size: 1.1em;
+  padding: 0.5em;
+}
+.list-heading .list-heading-grid .list-heading-form .list-heading-sent {
+  font-size: 0.8em;
+  color: darkgrey;
+}
+.list-heading .list-heading-grid div {
+  margin: auto 0;
+  text-align: center;
+}
+
+.projects {
+  background-color: white;
+  padding: 90px 90px;
+}
+.projects .projects-title {
+  text-align: center;
+}
+.projects .projects-grid {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  position: relative;
+}
+.projects .projects-grid .projects-project h3 {
+  font-size: 2.01em;
+  font-weight: bold;
+}
+.projects .projects-grid .projects-project p {
+  margin: 1.2em 0;
+  text-align: justify;
+  line-height: 2em;
+}
+.projects .projects-grid .projects-project li {
+  margin-top: 2.2em;
+}
+.projects .projects-grid .projects-project .projects-counter {
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 1em 4em;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+}
+.projects .projects-grid .projects-photo {
+  text-align: center;
+  font-size: 4em;
+}
+.projects .projects-grid .projects-photo img {
+  width: 55%;
+}
+.projects .projects-grid .projects-photo .projects-counter-responsive {
+  display: none;
+}
+.projects .projects-grid .projects-photo #projects-next,
+.projects .projects-grid .projects-photo #projects-prev {
+  cursor: pointer;
+}
+
+.schedule .schedule-title {
+  text-align: center;
+}
+.schedule .schedule-interval {
+  text-align: center;
+  margin: 3em 0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.schedule .schedule-interval .schedule-duration {
+  display: inline-block;
+  margin: 0 1em;
+}
+.schedule .schedule-interval .schedule-hr {
+  display: inline-block;
+  color: lightgrey;
+}
+.schedule .schedule-interval .schedule-hr hr {
+  display: inline-block;
+  width: 15em;
+  height: 0;
+  vertical-align: middle;
+  border: 2px dashed lightgrey;
+}
+.schedule ul {
+  text-align: center;
+}
+.schedule ul .schedule-responsive {
+  display: none;
+}
+.schedule ul li {
+  font-weight: bold;
+  background-color: white;
+  padding: 0.5em 0.6em;
+  border-radius: 15px;
+  margin: 0 1em;
+  font-size: 2em;
+  display: inline-block;
+  width: 20%;
+}
+.schedule .schedule-days-left {
+  text-align: center;
+  vertical-align: middle;
+  margin: 4em 0;
+}
+.schedule .schedule-days-left strong {
+  background-color: black;
+  padding: 0.3em 0.4em;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.3em;
+}
+.schedule .schedule-days-left p {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: inline-block;
+  margin: 0 2em;
+}
+.schedule .schedule-days-left .schedule-register {
+  padding: 0.6em 3em;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  height: 10%;
+  padding: 5% 4%;
+  background-color: white;
+  align-items: center;
+}
+footer li {
+  display: inline-block;
+  margin-left: 1em;
+}
+footer .footer-logo {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 15%;
+  align-items: center;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+footer .footer-contact {
+  font-size: 0.8em;
+}
+footer .footer-contact br {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .about-us .about-us-logo {
+    top: 40vh;
+    left: 13%;
+  }
+
+  .course-experience {
+    text-align: center;
+  }
+  .course-experience .course-experience-box {
+    display: none;
+  }
+  .course-experience .course-experience-p {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .projects {
+    margin: 40% auto;
+    padding: 0;
+    width: 90%;
+  }
+  .projects .projects-grid {
+    padding: 2em 3em;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
+  .projects .projects-grid .projects-project .projects-counter {
+    display: none;
+  }
+  .projects .projects-grid .projects-photo {
+    font-size: 2.5em;
+  }
+  .projects .projects-grid .projects-photo .projects-counter-responsive {
+    display: inline;
+    border-radius: 12px;
+    font-size: 0.5em;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 0.7em 1.2em;
+  }
+}
+@media screen and (max-width: 820px) {
+  .header {
+    width: 83%;
+  }
+  .header .desktop {
+    display: none;
+  }
+  .header .mobile {
+    top: 0;
+    z-index: 1;
+    display: inline-block;
+    width: 90%;
+    padding: 2em;
+    margin-bottom: 3em;
+    background-color: black;
+    color: white;
+    position: absolute;
+  }
+  .header .mobile .responsive {
+    padding: 0 10%;
+    font-size: 1.5em;
+  }
+  .header .mobile .responsive #hamburguer {
+    float: right;
+  }
+  .header .mobile .responsive .logo {
+    color: white;
+  }
+  .header .mobile ul {
+    display: none;
+    text-align: center;
+  }
+  .header .mobile ul .nav-item-mobile {
+    margin: 1.2em 0;
+  }
+  .header .mobile ul .nav-item-mobile a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .carousel {
+    line-height: normal;
+    position: static;
+    width: 90%;
+    display: block;
+    height: 520px;
+    margin: 40% auto;
+    margin-top: 40%;
+  }
+  .carousel .carousel-div .carousel-grid {
+    display: block;
+    padding: 2em;
+  }
+  .carousel .carousel-div .carousel-grid div {
+    padding: 0.3em 2em;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: auto;
+  }
+  .carousel .carousel-div .carousel-grid div h1 {
+    height: auto;
+  }
+  .carousel .carousel-div .carousel-grid div h2 {
+    height: auto;
+    margin-bottom: 1em;
+  }
+  .carousel .carousel-div .carousel-grid div p {
+    height: auto;
+    margin-bottom: 2em;
+  }
+  .carousel #button-prev,
+.carousel #button-next {
+    top: 8em;
+  }
+  .carousel #button-prev {
+    left: 0.3em;
+  }
+  .carousel #button-next {
+    right: 0.3em;
+  }
+  .carousel .carousel-img {
+    display: none;
+  }
+
+  .about-us {
+    width: 90%;
+    margin: 40% auto;
+    height: auto;
+  }
+  .about-us .about-us-logo {
+    display: none;
+  }
+  .about-us .about-us-div {
+    padding: 1em 2em;
+  }
+  .about-us .about-us-div .about-us-header {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .about-us .about-us-div .about-us-header .about-us-logo-responsive {
+    position: absolute;
+    width: 50%;
+    height: 15%;
+    top: 92vh;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    padding: 0.5em;
+  }
+  .about-us .about-us-div .about-us-header .about-us-logo-responsive p {
+    text-align: right;
+    margin-right: 0.5em;
+  }
+  .about-us .about-us-div .about-us-header .about-us-title {
+    text-align: center;
+    margin: 50% auto 0 auto;
+    padding: 0;
+  }
+  .about-us .about-us-div .about-us-header ul {
+    vertical-align: middle;
+  }
+  .about-us .about-us-div .about-us-header ul li {
+    text-align: right;
+    margin: 33% auto;
+  }
+  .about-us .about-us-div p {
+    height: auto;
+    padding: 2em 0;
+  }
+
+  .course-experience {
+    width: 90%;
+    margin: 40% auto;
+    height: auto;
+    padding: 0;
+  }
+  .course-experience .course-experience-title {
+    padding: 2em 2em 1em 2em;
+  }
+  .course-experience .course-experience-box {
+    display: none;
+  }
+  .course-experience ul li {
+    display: block;
+    border: 1px solid black;
+    padding: 0.8em 1em;
+    margin: 1em;
+    border-radius: 12px;
+  }
+  .course-experience .course-experience-p {
+    float: none;
+    margin: 0 auto;
+    font-size: 1em;
+    height: auto;
+    align-items: center;
+    padding-bottom: 2em;
+  }
+  .course-experience .course-experience-p p {
+    margin: 0 auto;
+    text-align: left;
+    height: auto;
+  }
+
+  .sessions {
+    margin: 40% auto;
+    width: 90%;
+    border-radius: 25px;
+  }
+  .sessions .sessions-sessions {
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .sessions .sessions-sessions .sessions-information {
+    margin: 2em auto 1em auto;
+    width: 90%;
+    font-size: 1.1em;
+  }
+  .sessions .sessions-sessions .sessions-information .sessions-number {
+    margin-top: 0.5em;
+  }
+  .sessions .sessions-sessions .sessions-information ul {
+    display: block;
+    text-align: center;
+  }
+  .sessions .sessions-sessions .sessions-information ul li {
+    margin-bottom: 1.5em;
+  }
+  .sessions .sessions-sessions .sessions-container {
+    display: inline-block;
+  }
+  .sessions .sessions-sessions .sessions-container .img {
+    display: block;
+    margin: 1em auto;
+    text-align: center;
+  }
+
+  .masters {
+    margin: 40% auto;
+    width: 90%;
+    padding: 0;
+  }
+  .masters .masters-title {
+    padding: 2em 2em 1em 2em;
+  }
+  .masters .masters-grid {
+    width: auto;
+    grid-template-columns: auto auto;
+  }
+  .masters .masters-grid .master .img-overlay .overlay {
+    transform: translate(26%, -175%);
+  }
+
+  .faq {
+    width: 90%;
+    margin: 40% auto;
+  }
+  .faq ul {
+    margin: auto;
+  }
+  .faq ul li {
+    width: 80%;
+  }
+  .faq i,
+.faq svg {
+    align-self: end !important;
+  }
+
+  .course-fee {
+    margin: 40% auto;
+    width: 90%;
+    padding: 0;
+  }
+  .course-fee .course-fee-title {
+    padding: 1em 2em 2em 2em;
+    margin-bottom: 0;
+  }
+  .course-fee .course-fee-grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    padding: 1em 2em;
+  }
+  .course-fee .course-fee-grid .course-fee-box {
+    margin-top: 2em;
+    padding: 1em 2em;
+  }
+  .course-fee .course-fee-refound {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .list-heading {
+    padding: 1em 2em;
+  }
+  .list-heading .list-heading-grid {
+    display: block;
+  }
+  .list-heading .list-heading-grid .list-heading-form .list-heading-sent {
+    margin-bottom: 1em;
+  }
+
+  .schedule {
+    padding: 0;
+    margin: 40% auto;
+    width: 90%;
+  }
+  .schedule .schedule-interval {
+    display: none;
+  }
+  .schedule ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .schedule ul .schedule-responsive {
+    display: block;
+    font-size: 1.1em;
+    background-color: #f0f0f0;
+  }
+  .schedule ul li {
+    font-size: 1em;
+    width: 80%;
+  }
+  .schedule .schedule-days-left {
+    margin-top: 2em;
+  }
+  .schedule .schedule-days-left p {
+    margin-left: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  footer .footer-logo {
+    margin-left: 1em;
+  }
+  footer .footer-contact br {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
